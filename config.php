@@ -1,4 +1,6 @@
 <?php 
+
+session_start();
 $username = cooperaj; 
 $password = 09cooperA; 
 $host = "db4free.net:3306"; 
