@@ -8,5 +8,6 @@
 	}
     // define global constants
 	define ('ROOT_PATH', realpath(dirname(__FILE__)));
-	define('BASE_URL', 'www.db4free.net/astonevents1997/');
+	define('BASE_URL', 'www.db4free.net');
 ?>
+
