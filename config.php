@@ -1,12 +1,18 @@
 <?php 
-	session_start();
-	// connect to database
-	$conn = mysqli_connect("db4free.net:3306", "cooperaj", "09cooperA", "astonevents1997");
+$username = cooperaj; 
+$password = 09cooperA; 
+$host = "db4free.net:3306"; 
+$dbname = astonevents1997; 
 
-	if (!$conn) {
-		die("Error connecting to database I hate myself much: " . mysqli_connect_error());
-	}
-    // define global constants
-	define ('ROOT_PATH', realpath(dirname(__FILE__)));
-	define('BASE_URL', 'www.db4free.net');
+$options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'); 
+
+try 
+{ 
+    $db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options); 
+} 
+catch(PDOException $ex) 
+{ 
+    die("Failed to connect to the database MUHAHAHAHHAH: " . $ex->getMessage()); 
+} 
+
 ?>
