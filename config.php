@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	// connect to database
-	$conn = mysqli_connect("localhost:3306", "cooperaj", "09cooperA", "astonevents1997");
+	$conn = mysqli_connect("db4free.net", "cooperaj", "09cooperA", "astonevents1997");
 
 	if (!$conn) {
 		die("Error connecting to database I hate myself much: " . mysqli_connect_error());
